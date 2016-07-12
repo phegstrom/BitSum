@@ -20536,8 +20536,9 @@ var QueryList = React.createClass({
 
 	componentDidMount: function () {
 
-		var url = 'https://limitless-brook-29686.herokuapp.com/';
-		// var url = 'http://localhost:3000/';
+		// Local vs. Hosted url
+		// var url = 'https://limitless-brook-29686.herokuapp.com/';
+		var url = 'http://localhost:3000/';
 
 		// handle socket communication for live updates
 		var socket = io.connect(url);
