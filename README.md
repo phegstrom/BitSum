@@ -1,5 +1,5 @@
 # BitSum
-
+The app is hosted on heroku [here](https://limitless-brook-29686.herokuapp.com/). If you would like to run locally, follow the instructions below.
 #### Getting Started
 
 * Install node using [Node Version Manager](https://github.com/creationix/nvm). I suggest using the cURL install script.
