@@ -10,6 +10,7 @@ var mongoose = require('mongoose');
 // load main config file
 var config = require('./config/index');
 
+// load route middleware
 var routes = require('./routes/index');
 var countBits = require('./routes/function');
 
@@ -19,14 +20,14 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// assign routing middleware to endpoints
 app.use('/', routes);
 app.use('/bitsum', countBits);
 
@@ -51,6 +52,8 @@ if (app.get('env') === 'development') {
   });
 }
 
+
+// connect to the database
 mongoose.connect(config.db_URL, function(err) {
     if(err) {
         console.log('connection error', err);
