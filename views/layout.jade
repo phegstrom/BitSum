@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title BitSum
+    
+    link(rel='stylesheet', href='./css/layout.min.css')
+
+    //- Google front end APIs
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css')
+
+    block scripts
+      script(src='./bower_components/jquery/dist/jquery.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js')
+       
+  body
+    nav
+      .nav-wrapper
+        a(href="#").brand-logo.left 
+          #brand BitSum                
+    .container
+      block content
+
+    //- needed for web sockets
+    script(src="./bower_components/socket.io-client/socket.io.js")
+    //- master react js file created by browserify
+    script(src="./js/react/bundle.js")
