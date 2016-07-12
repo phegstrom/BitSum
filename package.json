@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "postinstall": "bower install && grunt build"
+    "postinstall": "bower install"
   },
   "dependencies": {
     "babel-preset-react": "^6.11.1",
